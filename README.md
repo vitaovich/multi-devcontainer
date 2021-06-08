@@ -1,0 +1,1 @@
+reference to get both apis open at [Connecting to multiple containers at once](https://code.visualstudio.com/docs/remote/containers-advanced#_connecting-to-multiple-containers-at-once)
