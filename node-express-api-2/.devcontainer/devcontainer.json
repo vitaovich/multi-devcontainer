@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/javascript-node
 {
-	"name": "Node.js",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": { "VARIANT": "14" }
-	},
+	"name": "Container 2",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "container-2",
+	"shutdownAction": "none",
+	// Open the sub-folder with the source code
+	"workspaceFolder": "/workspace/node-express-api-2",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -23,8 +23,8 @@
 
 	// Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
 	"portsAttributes": {
-		"3000": {
-			"label": "Hello Remote World",
+		"40003": {
+			"label": "Node Express 2",
 			"onAutoForward": "notify"
 		}
 	},
